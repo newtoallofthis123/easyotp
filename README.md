@@ -40,7 +40,11 @@ func main() {
 
 It is that easy!
 
-But, here is a small doc of all the stuff you may need, so consider this the mini doc :)
+## Installation
+
+```bash
+go get github.com/newtoallofthis123/easyotp
+```
 
 ## Mini Doc
 
@@ -92,7 +96,7 @@ This id can be passed into the context of any web server or application that nee
 Otp has to be passed in manually, or using the many generators provided 
 also, this function can only be used with an instance
 
-`ValidateOtp(id string, otp string) (bool, error)`: Validates the provided otp and the id and returns if it is correct or not Uses a simple select query on the database.
+- `ValidateOtp(id string, otp string) (bool, error)`: Validates the provided otp and the id and returns if it is correct or not Uses a simple select query on the database.
 Needs the context of the instance as well.
 This can be used by storing the id in the localstorage or the cookies of the browser,
 then getting it in the auth request, then validating the otp like this
